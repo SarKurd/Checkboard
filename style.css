@@ -1,0 +1,96 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  height: 600px;
+  width: 500px;
+}
+#app .chess--options {
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#app .chess--options .button {
+  font-size: 20px;
+  background-color: white;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  padding: 0 20px;
+}
+#app .chess--options .button--green {
+  background-color: #027e02;
+  color: white;
+}
+#app .chess--options .button--green:hover {
+  background-color: #036803;
+}
+#app .chess--options .button--red {
+  background-color: #9a1614;
+  color: white;
+}
+#app .chess--options .button--red:hover {
+  background-color: #7e1513;
+}
+#app .chess--options .pattern {
+  font-size: 20px;
+  cursor: pointer;
+}
+#app .chess--options .pattern input {
+  cursor: pointer;
+}
+
+.chess--wrapper {
+  height: 500px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid black;
+  position: relative;
+}
+.chess--wrapper .box {
+  background-color: white;
+}
+.chess--wrapper .box--black {
+  background-color: black;
+}
+.chess--wrapper .piece {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 125px;
+  width: 125px;
+  z-index: 10px;
+  padding: 5px;
+  text-align: center;
+}
+.chess--wrapper .piece i {
+  font-size: 100px;
+  color: #dfcd06;
+  backface-visibility: hidden;
+  transform: scaleX(-1);
+}
